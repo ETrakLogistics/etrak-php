@@ -1,0 +1,16 @@
+{
+    "name": "parcelmonkeygroup/etrak-php",
+    "description": "PHP SDK for eTrak",
+    "authors": [
+        {
+            "name": "Richard Barrett",
+            "email": "rich@parcelmonkey.com"
+        }
+    ],
+    "require": {
+        "nategood/httpful": "^0.2.20"
+    },
+    "autoload": {
+        "classmap": [ "src/" ]
+    }
+}
