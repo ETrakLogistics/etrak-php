@@ -10,6 +10,15 @@ Install with composer.
 composer require parcelmonkeygroup/etrak
 ```
 
+# Environment
+
+To use the sandbox, simply call the sandbox() method when instantiating your connection.
+```php
+
+$etrak = \etrak\etrak::instance()->setApiKey(YOUR_API_KEY)->sandbox();
+
+```
+
 # Example Usage
 
 ## Obtain a temporary API key with your eTrak login:
