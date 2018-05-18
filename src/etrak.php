@@ -17,8 +17,9 @@ class etrak extends Singleton {
     $this->endpoint = ($sandbox) ? $this->endpoint_sandbox : $this->endpoint_production;
   }
   
-  function sandbox($sandbox=true) {
-    $this->endpoint = ($sandbox) ? $this->endpoint_sandbox : $this->endpoint_production;
+  public function sandbox() {
+    $this->endpoint = $this->endpoint_sandbox;
+    return $this;
   }
   
   function setApiKey($key) {
