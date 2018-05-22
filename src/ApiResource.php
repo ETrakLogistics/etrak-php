@@ -29,7 +29,7 @@ abstract class ApiResource {
     
   }
   
-  function get($id=false) {
+  static function get($id=false) {
     
     $r = self::init();
     $r->method = 'GET';
@@ -38,7 +38,7 @@ abstract class ApiResource {
     
   }
   
-  function update($id=false, $payload) {
+  static function update($id=false, $payload) {
     
     $r = self::init();    
     $r->payload = $payload;
@@ -48,7 +48,7 @@ abstract class ApiResource {
     
   }
   
-  function delete($id=false) {
+  static function delete($id=false) {
     
     $r = self::init();    
     $r->payload = $payload;

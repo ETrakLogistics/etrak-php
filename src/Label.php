@@ -6,7 +6,7 @@ class Label extends ApiResource {
   
   var $uri = '/Label';
   
-  function get($id, $format='base64') {
+  static function get($id, $format='base64') {
     
     $r = self::init();
     $r->method = 'GET';
