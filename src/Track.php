@@ -6,7 +6,7 @@ class Track extends ApiResource {
   
   var $uri = '/Track';
   
-  static function get($barcode, $postcode) {
+  static function getEvents($barcode, $postcode) {
     
     $barcode = urlencode($barcode);
     $postcode = urlencode($postcode);
