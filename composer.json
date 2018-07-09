@@ -2,7 +2,7 @@
     "name": "parcelmonkeygroup/etrak-php",
     "description": "PHP SDK for eTrak",
     "license": "MIT",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "authors": [
         {
             "name": "Richard Barrett",
