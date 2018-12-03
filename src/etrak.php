@@ -4,23 +4,41 @@ namespace etrak;
 
 class etrak extends Singleton
 {
-    public $apiKey;
+    const ENDPOINT_PRODUCTION = 'https://api.etrak.io/api';
+    const ENDPOINT_SANDBOX = 'https://sandbox.api.etrak.io/api';
 
-    public $endpoint_production = 'https://api.etrak.io/api';
+    /**
+     * @var string
+     */
+    protected $apiKey;
 
-    public $endpoint_sandbox = 'https://sandbox.api.etrak.io/api';
+    /**
+     * @var string
+     */
+    protected $endpoint = self::ENDPOINT_PRODUCTION;
 
-    public $apiVersion = '1.0';
+    /**
+     * @var string
+     */
+    protected $apiVersion = '1.0';
 
+    /**
+     * @var HttpClient
+     */
+    protected $HttpClient;
+
+    /**
+     * etrak constructor.
+     */
     public function __construct()
     {
         $this->initHttpClient();
-        $this->endpoint = ($sandbox) ? $this->endpoint_sandbox : $this->endpoint_production;
     }
 
     public function sandbox()
     {
-        $this->endpoint = $this->endpoint_sandbox;
+        $this->endpoint = self::ENDPOINT_SANDBOX;
+        $this->initHttpClient();
         return $this;
     }
 
