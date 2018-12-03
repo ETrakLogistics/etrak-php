@@ -17,7 +17,6 @@ class HttpClient
     public function addHeader($key, $value)
     {
         $this->headers[$key] = $value;
-        ;
     }
 
     public function sendRequest($method, $url, $payload='', $headers=array())
