@@ -17,4 +17,3 @@ header("Content-Disposition:inline;filename='$CONSIGNMENT_ID.pdf");
 echo base64_decode($response->body->data);
 
 
-?>

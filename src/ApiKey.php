@@ -1,11 +1,8 @@
-<?PHP
+<?php
 
 namespace etrak;
 
-class ApiKey extends ApiResource {
-  
-  var $uri = '/CreateApiKey';
-    
+class ApiKey extends ApiResource
+{
+    public $uri = '/CreateApiKey';
 }
-
-?>

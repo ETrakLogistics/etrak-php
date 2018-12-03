@@ -20,4 +20,3 @@ $r = \etrak\ApiKey::create([
 ]);
 print_r($r);
 
-?>

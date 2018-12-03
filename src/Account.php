@@ -1,11 +1,8 @@
-<?PHP
+<?php
 
 namespace etrak;
 
-class Account extends ApiResource {
-  
-  var $uri = '/Account';
-    
+class Account extends ApiResource
+{
+    public $uri = '/Account';
 }
-
-?>

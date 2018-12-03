@@ -1,11 +1,8 @@
-<?PHP
+<?php
 
 namespace etrak;
 
-class Consignment extends ApiResource {
-  
-  var $uri = '/Consignment';
-    
+class Consignment extends ApiResource
+{
+    public $uri = '/Consignment';
 }
-
-?>

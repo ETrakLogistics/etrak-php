@@ -26,4 +26,3 @@ abstract class Singleton
     abstract protected function __construct();
 }
 
-?>

@@ -19,4 +19,3 @@ $r = \etrak\AuthenticateUser::create([
 
 print_r($r);
 
-?>
