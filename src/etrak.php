@@ -71,4 +71,20 @@ class etrak extends Singleton
     {
         return $this->HttpClient;
     }
+
+    /**
+     * @return string
+     */
+    public function getEndpoint()
+    {
+        return $this->endpoint;
+    }
+
+    /**
+     * @return string
+     */
+    public function getApiVersion(): string
+    {
+        return $this->apiVersion;
+    }
 }

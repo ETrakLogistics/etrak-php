@@ -70,7 +70,7 @@ abstract class ApiResource
 
     public function sendRequest()
     {
-        $response = $this->etrak->getHttpClient()->sendRequest($this->method, $this->etrak->endpoint.$this->uri, $this->payload, $this->headers);
+        $response = $this->etrak->getHttpClient()->sendRequest($this->method, $this->etrak->getEndpoint().$this->uri, $this->payload, $this->headers);
         return $response;
     }
 }
