@@ -7,7 +7,7 @@ This interacts with the API defined here: https://docs.etrak.io/
 # Installation
 Install with composer.
 ```shell
-composer require parcelmonkeygroup/etrak
+composer require parcelmonkeygroup/etrak-php
 ```
 
 # Environment
