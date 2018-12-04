@@ -43,7 +43,7 @@ abstract class ApiResource
     {
         $r = self::init();
         $r->method = 'GET';
-        $r->uri.= http_build_query(compact('page', 'show'));
+        $r->uri.= '?'.http_build_query(compact('page', 'show'));
         return $r->sendRequest();
     }
 
