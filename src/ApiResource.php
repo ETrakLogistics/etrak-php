@@ -38,6 +38,14 @@ abstract class ApiResource
         return $r->sendRequest();
     }
 
+    public static function paginate($page = 1, $show = 10)
+    {
+        $r = self::init();
+        $r->method = 'GET';
+        $r->uri.= http_build_query(compact('page', 'show'));
+        return $r->sendRequest();
+    }
+
     public static function update($id=false, $payload)
     {
         $r = self::init();
