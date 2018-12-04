@@ -63,4 +63,12 @@ class etrak extends Singleton
             $this->HttpClient->addHeader('Authorization', $this->apiKey);
         }
     }
+
+    /**
+     * @return HttpClient
+     */
+    public function getHttpClient()
+    {
+        return $this->HttpClient;
+    }
 }

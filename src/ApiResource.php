@@ -7,6 +7,7 @@ abstract class ApiResource
     public $uri;
     public $payload = '';
     public $headers = [];
+    public $etrak;
 
     public function __construct()
     {
@@ -60,7 +61,6 @@ abstract class ApiResource
     public static function delete($id=false)
     {
         $r = self::init();
-        $r->payload = $payload;
         $r->method = 'DELETE';
         if ($id) {
             $r->uri.="/$id";
@@ -70,7 +70,7 @@ abstract class ApiResource
 
     public function sendRequest()
     {
-        $response = $this->etrak->HttpClient->sendRequest($this->method, $this->etrak->endpoint.$this->uri, $this->payload, $this->headers);
+        $response = $this->etrak->getHttpClient()->sendRequest($this->method, $this->etrak->endpoint.$this->uri, $this->payload, $this->headers);
         return $response;
     }
 }
