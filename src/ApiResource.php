@@ -47,14 +47,21 @@ abstract class ApiResource
         return $r->sendRequest();
     }
 
-    public static function update($id=false, $payload)
+    public static function update($id, $payload)
     {
         $r = self::init();
         $r->payload = $payload;
         $r->method = 'PUT';
-        if ($id) {
-            $r->uri.="/$id";
-        }
+        $r->uri.="/$id";
+        return $r->sendRequest();
+    }
+
+    public static function partialUpdate($id, array $payload)
+    {
+        $r = self::init();
+        $r->payload = $payload;
+        $r->method = 'PATCH';
+        $r->uri.="/$id";
         return $r->sendRequest();
     }
 
