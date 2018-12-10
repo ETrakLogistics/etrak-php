@@ -39,11 +39,14 @@ abstract class ApiResource
         return $r->sendRequest();
     }
 
-    public static function paginate($page = 1, $show = 10)
+    public static function paginate(array $options = [])
     {
         $r = self::init();
         $r->method = 'GET';
-        $r->uri.= '?'.http_build_query(compact('page', 'show'));
+        $options = array_intersect_key($options, array_flip(['page', 'show', 'q', 'include']));
+        if (!empty($options)) {
+            $r->uri.= '?'.http_build_query($options);
+        }
         return $r->sendRequest();
     }
 
