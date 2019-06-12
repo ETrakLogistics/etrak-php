@@ -5,7 +5,7 @@ namespace etrak;
 class HttpClient
 {
     public $headers = array();
-    public $request_timeout = 10;
+    public $request_timeout = 20;
     public $endpoint;
 
     public function __construct($endpoint)
