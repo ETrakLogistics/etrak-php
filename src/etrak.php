@@ -4,7 +4,7 @@ namespace etrak;
 
 class etrak extends Singleton
 {
-    const ENDPOINT_PRODUCTION = 'https://v1.api.etrak.io/api';
+    const ENDPOINT_PRODUCTION = 'https://api.etrak.io/api';
     const ENDPOINT_SANDBOX = 'https://sandbox.api.etrak.io/api';
 
     /**
