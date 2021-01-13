@@ -1,3 +1,6 @@
+# Please note this library is no longer supported
+
+
 # eTrak PHP SDK
 Use this to make your eTrak integration much easier.
 
